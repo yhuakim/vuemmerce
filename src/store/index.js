@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-// import axios from 'axios';
 
 function updateLocalStorage(cartItems) {
   let cart = JSON.stringify(cartItems)
