@@ -110,13 +110,13 @@ export default {
             return this.$store.state.products
         },
         electronics() {
-            return this.$store.state.electronics
+            return this.$store.getters.electronicsCategories
         },
         jewelries() {
-            return this.$store.state.jewelries
+            return this.$store.getters.jewelriesCategories
         },
         clothing() {
-            return this.$store.state.clothes
+            return this.$store.getters.clothesCategories
         },
     },
 }

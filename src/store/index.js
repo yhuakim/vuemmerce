@@ -8,22 +8,22 @@ function updateLocalStorage(cartItems) {
 export default createStore({
   state: {
     products: [],
-    clothes: [],
-    jewelries: [],
-    electronics: [],
+    // clothes: [],
+    // jewelries: [],
+    // electronics: [],
     cartItems: [],
   },
   getters: {
-    fashionCategories(state) {
-      state.clothes = state.products.filter(item => item.category === "men's clothing" || item.category === "women's clothing").slice(1, 9)
+    clothesCategories(state) {
+      return state.products.filter(item => item.category === "men's clothing" || item.category === "women's clothing").slice(1, 9)
     },
 
     jewelriesCategories(state) {
-      state.jewelries = state.products.filter(item => item.category === "jewelery")
+      return state.products.filter(item => item.category === "jewelery")
     },
 
     electronicsCategories(state) {
-      state.electronics = state.products.filter(item => item.category === "electronics")
+      return state.products.filter(item => item.category === "electronics")
     },
 
     cartQuantity(state) {
